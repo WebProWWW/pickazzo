@@ -1,0 +1,56 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+body:after
+    content ''
+    display block
+    height 1px
+    clear both
+
+
+
+.wrapper
+    padding-top 100px
+    margin-left 300px
+
+.header
+    padding 10px 0
+    display flex
+    align-items center
+    &.toggle-active
+        box-shadow none
+    &.onscroll
+        .header-logo-txt
+            display none
+        .header-logo-img
+            width 110px
+.header-logo
+    mpd()
+    width 230px
+.header-logo-img
+    mpd(0 auto)
+    trans()
+    width 160px
+    height auto
+.header-logo-txt
+    mpd(3px 0 0)
+    text-align center
+    font-size 13px
+
+
+
+.navbar
+    top 100px
+    left 0
+    box-shadow none
+    float left
+    &.onscroll
+        top 46px
+// .navbar-logo
+//     mpd(0 auto 15px)
+// .navbar-logo-img
+//     mpd(0 0 15px)
+//     width 160px
+// .navbar-logo-txt
+//     mpd(-10px 0 0)
+//     text-align center
+//     font-size 13px

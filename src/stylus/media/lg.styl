@@ -1,0 +1,45 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+.org-item
+    position relative
+.org-item:after
+    mpd()
+    content ''
+    position absolute
+    width 80px
+    height @width
+    background url('../img/arc.svg') 50% 50% no-repeat
+.org-item.lt:after
+    transform rotate(180deg)
+    right -20px
+    top 130%
+.org-item.lb:after
+    transform rotate(-90deg)
+    right -20px
+    bottom 130%
+.org-item.rt:after
+    transform rotate(90deg)
+    left -20px
+    top 130%
+.org-item.rb:after
+    left -20px
+    bottom 130%
+
+
+
+.slider
+    max-width 870px
+    .slick-track
+        padding-top 60px
+        padding-bottom (@padding-top + 10)
+    .slick-active .slider-img
+        transform scale(1.2)
+        box-shadow 0 3px 8px 0 alpha(black, 60%)
+    .slick-center .slider-img
+        box-shadow 0 3px 10px 0 alpha(black, 70%)
+        transform scale(1.5)
+
+
+
+.right-lg
+    text-align right

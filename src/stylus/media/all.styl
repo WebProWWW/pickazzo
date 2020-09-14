@@ -1,0 +1,732 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+html, body
+    height 100%
+
+html
+    font-family sans-serif
+    font-size 14px
+
+body
+    font-family 'Montserrat',sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"
+    font-weight 400
+    font-size 14px
+body.fancybox-active
+    height 100%
+
+h1, .h1
+    mpd(0 0 15px)
+    font-size 20px
+    font-weight 400
+
+h2, .h2
+    mpd(0 0 15px)
+    font-size 18px
+    font-weight 400
+
+h3, .h3
+    mpd(0 0 15px)
+    font-size 16px
+    font-weight 400
+
+h4, .h4
+    mpd(0 0 15px)
+    font-size 14px
+    font-weight 400
+
+p, .p
+    mpd(0 0 15px)
+    font-size 14px
+    font-weight 400
+
+
+
+.wrapper
+    mpd(0, 60px 0 1px, flex)
+    flex-direction column
+    min-height 100%
+
+
+.breadcrumb
+    mpd(0 0 10px, 0, flex)
+    flex-wrap wrap
+    font-size: 12px
+    line-height 1
+.breadcrumb-item
+    mpd(0 0 5px, 0, flex)
+    resetLn(gray, #2483FF)
+    trans()
+    align-items: center
+    user-select none
+    cursor pointer
+.breadcrumb-item:after
+    mpd(0 4px)
+    font-size 14px
+    content '\00B7'
+.breadcrumb-item:last-child:after
+    display none
+
+
+
+.header
+    mpd(0, 3px 0)
+    trans()
+    box-sizing border-box
+    position fixed
+    top 0
+    left 0
+    right 0
+    background white
+    z-index 110
+    &.toggle-active
+    &.onscroll
+        box-shadow 0 0 8px 0 alpha(black, 50%)
+
+
+.toggle
+    mpd()
+    position relative
+    width 34px
+    height @width
+    user-select none
+    cursor pointer
+.toggle:before
+.toggle:after
+    mpd(-1px 0 0)
+    trans()
+    content ''
+    position absolute
+    left 0
+    width 100%
+    box-sizing border-box
+    height 2px
+    border-radius 2px
+    background black
+.toggle:before
+    top 11px
+.toggle:after
+    bottom 11px
+.toggle.active:before
+.toggle.active:after
+    top 50%
+.toggle.active:before
+    transform rotate(45deg)
+.toggle.active:after
+    transform rotate(-45deg)
+
+
+.navbar
+    mpd(0, 15px 15px 1px, flex)
+    trans(300)
+    flex-direction column
+    position fixed
+    top 40px
+    bottom 0
+    width 260px
+    left 0 - @width - 10
+    background white
+    box-shadow 0 0 8px 0 alpha(black, 50%)
+    z-index 100
+    overflow-y auto
+    // border-right 1px solid #DBDBDB
+.navbar.active
+    left 0
+.navbar-logo
+    mpd(0 auto 15px)
+.navbar-logo-img
+    width 110px
+// .navbar-logo-txt
+//     display none
+// .navbar-txt
+//     font-size 13px
+
+
+
+form
+    mpd()
+
+label
+    mpd(0 0 7px)
+    font-weight 400
+    color #B2B2B2
+    line-height 1.1
+
+textarea
+input[type="text"]
+input[type="password"]
+    appearance none
+    outline none
+    mpd(0 0 15px, 7px 15px)
+    b(#B2B2B2)
+    border-radius 5px
+    box-sizing border-box
+    width 100%
+    background white
+    font-size 14px
+    &[data-mask]
+        letter-spacing .06em
+    &:focus
+        b(#2B96FF)
+    &.error
+        b(#F52A07)
+        color #F52A07
+    &.error::placeholder
+        color #F52A07
+
+textarea
+    resize vertical
+
+.input-error
+    mpd(-10px 0 15px, 0 0 0 15px)
+    font-size 11px
+    color #F52A07
+
+
+.checkbox
+    mpd(0 0 15px, 0, flex)
+    align-items center
+    user-select none
+    cursor pointer
+.checkbox-txt
+    mpd(0, 0 0 0 10px)
+    width auto
+.checkbox-style
+    mpd()
+    trans()
+    position relative
+    flex 0 0 auto
+    width 34px
+    height 24px
+    border-radius 12px
+    background #B2B2B2
+.checkbox-style:before
+    mpd(1px 0 0 1px)
+    trans()
+    content ''
+    position absolute
+    top 0
+    left 0
+    width 22px
+    height @width
+    border-radius 50%
+    background white
+input[type="checkbox"]
+    mpd(0, 0, none)
+input[type="checkbox"]:checked + .checkbox-style
+    background #2B96FF
+input[type="checkbox"]:checked + .checkbox-style:before
+    left 10px
+// input[type="checkbox"]:disabled + .checkbox-style
+
+
+.inwith
+    mpd(0 -8px 15px, 0, flex)
+    justify-content center
+.inwith-icon
+    mpd(0, 0 8px)
+    trans()
+    font-size 24px
+    color #B2B2B2
+    user-select none
+    cursor pointer
+    &:hover
+        color #2B96FF
+
+
+.tab
+    mpd(0 0 15px, 0, flex)
+    background white
+.tab-btn
+    mpd(0 -1px 0 0, 6px 15px)
+    resetLn(black, black)
+    b(#b2b2b2)
+    trans()
+    width 100%
+    text-align center
+    user-select none
+    cursor pointer
+.tab-btn:first-child
+    border-radius 5px 0 0 5px
+.tab-btn:last-child
+    border-radius 0 5px 5px 0
+.tab-btn.active
+    b(#2B96FF)
+    background #2B96FF
+    color white
+.tab-btn.active + .tab-btn
+    border-left 1px solid transparent
+
+
+
+.block
+    mpd(0 0 15px, 15px 0 1px)
+
+
+
+
+.btn
+    mpd(0 0 15px, 10px 15px, flex)
+    b(transparent, 1)
+    trans()
+    &, &:hover, &:focus
+        text-decoration none
+        outline none
+        appearance none
+    align-items center
+    justify-content center
+    box-sizing border-box
+    width 100%
+    border-radius 5px
+    font-size 1rem
+    font-weight 400
+    line-height 1
+    user-select none
+    cursor pointer
+    & > i
+        mpd()
+
+.loader-img
+    mpd()
+    height 1rem
+    width 50px
+    max-width 100%
+
+.btn-sm
+    padding 7px 13px
+    border-radius 4px
+    font-size 12px
+.btn-blue
+    resetLn(white, white)
+    b(#2B96FF, 1)
+    background #2B96FF
+    color white
+    &:not([href])
+    &:not([href]):focus
+    &:not([href]):active
+    &:not([href]):hover
+        color white
+        cursor pointer
+    &:hover
+        b(#2483FF, 1)
+        background #2483FF
+.btn-white
+    b(#DBDBDB, 1)
+    background white
+    color #9B9B9B
+    &:hover, &.active
+        b(#F52A07, 1)
+        color #F52A07
+.btn-tblack
+    b(grey, 1)
+    background white
+    color grey
+    &:hover, &.active
+        b(#F52A07, 1)
+        color #F52A07
+.btn-tred
+    resetLn(#F52A07, #F52A07)
+    b(#F52A07, 1)
+    &:hover, &.active
+        background #F52A07
+        color white
+
+
+
+.nav
+    mpd(0 0 15px)
+    text-align center
+.nav-ln
+    mpd(0 auto, 3px 0, inline-block)
+    resetLn(black, #F52A07)
+    b(transparent, 2)
+    trans()
+.nav-ln.active
+    resetLn(#F52A07, #F52A07)
+.nav-btn
+    display inline-block
+    width auto
+    margin 3px 0
+
+
+.soc
+    mpd(0 -5px 15px, 0, flex)
+    justify-content center
+.soc-ln
+    mpd(0, 0 8px)
+    resetLn(black, #F52A07)
+    trans()
+    font-size 14px
+.soc-i
+    mpd()
+
+
+.logo
+    mpd()
+    height 25px
+    // width 110px
+    max-width 100%
+.logo-ln
+    mpd()
+    resetLn(black, black)
+
+
+.dropdown
+    mpd()
+    box-sizing border-box
+    position relative
+    cursor pointer
+    user-select none
+    z-index 100
+    &:hover
+        .dropdown-content
+            opacity 1
+            visibility visible
+        .dropdown-btn:after
+            transform rotate(180deg)
+.dropdown-btn
+    mpd(0, 0, flex)
+    align-items center
+    font-weight 400
+    font-size 14px
+    line-height 1
+.dropdown-btn-txt
+    mpd(0 10px)
+.dropdown-btn-img
+    mpd()
+.dropdown-btn:after
+    mpd()
+    arrowToBottom(8, 4, black)
+    trans()
+    content ''
+.dropdown-content
+    mpd(10px 0 0, 10px 10px 1px)
+    trans()
+    position absolute
+    background alpha(#DBDBDB, 96%)
+    border-radius 4px
+    box-shadow 0 5px 5px 0 alpha(black, 30%)
+    opacity 0
+    visibility hidden
+.dropdown-content:before
+    mpd(-10px -10px 0)
+    content ''
+    position absolute
+    top 0
+    width 100%
+    height 10px
+    // background red
+.dropdown-content:after
+    mpd()
+    arrowToTop(16, 8, alpha(#DBDBDB, 80%))
+    content ''
+    position absolute
+    top -8px
+.dropdown-content.bottom-right:after
+    right 20px
+.dropdown-content.bottom-right
+    top 100%
+    right 0
+.dropdown-content.bottom-center
+    top 100%
+    width 180px
+    left 50%
+    margin-left -90px
+.dropdown-content.bottom-center:after
+    left 50%
+    margin-left -8px
+.dropdown-ln
+    mpd(0 0 10px, 0, flex)
+    resetLn(black, #F52A07)
+    align-items center
+    white-space nowrap
+    font-size 14px
+    line-height 1
+
+
+
+
+.ucart
+    mpd(0, 0, flex)
+    trans()
+    &, &:hover, &:active, &:focus
+        text-decoration none
+        outline none
+    font-size 20px
+    color #2B96FF
+    user-select none
+    cursor pointer
+    &:hover .ucart-txt
+        color #2483FF
+.ucart-count
+    mpd(-6px 0 0 -1px, 1px 0 0)
+    position relative
+    z-index 3
+    box-sizing border-box
+    background #F52A07
+    color white
+    font-size 10px
+    height 18px
+    width @height
+    border-radius 50%
+    text-align center
+    overflow hidden
+.ucart-txt
+    mpd()
+    trans()
+    font-weight 400
+    font-size 14px
+    // line-height 1
+    color black
+
+
+
+// .breadcrumb
+//     mpd(-10px 0 15px, 0, flex)
+// .breadcrumb-ln
+//     mpd()
+//     resetLn(black, #F52A07)
+//     trans()
+//     font-weight 400
+//     font-size 16px
+// .breadcrumb-ln:after
+//     content '-'
+//     display inline-block
+//     padding 0 5px
+//     color black
+// .breadcrumb-ln:last-child:after
+//     display none
+
+
+.text
+    font-size 14px
+    font-weight 400
+
+
+.lang
+    mpd(0 -5px, 0, flex)
+    justify-content center
+    align-items center
+    user-select none
+    cursor default
+
+.lang-ln
+    mpd(0, 0 5px)
+    resetLn(black, #F52A07)
+    trans()
+    font-size 24spx
+    cursor pointer
+
+.lang-dv
+    mpd()
+
+
+.ws-nowrap
+    white-space nowrap
+.center
+    text-align center
+.left
+    text-align left
+.right
+    text-align right
+.italic
+    font-style italic
+.snormal
+    font-style normal
+.bold
+    font-weight bold
+.wnormal
+    font-weight 400
+.gray
+    color #B2B2B2
+.w-100
+    mpd()
+    width 100%!important
+
+
+
+.slider-img
+    mpd()
+    trans(300)
+    user-select none
+    cursor pointer
+    max-width 100%
+    height auto
+
+.slider
+    mpd(0 auto 15px)
+    max-width 290px
+    .slick-track
+        padding-top 16px
+        padding-bottom (@padding-top + 12)
+    .slick-slide
+        user-select none
+        cursor pointer
+        &:focus, &:hover, &:active
+            outline none
+    .slick-current
+        position relative
+        z-index 100
+    .slick-center .slider-img
+        transform scale(1.3)
+        box-shadow 0 3px 8px 0 alpha(black, 50%)
+
+
+
+.ava
+    mpd(0 0 15px)
+    width 70px
+    height @width
+    b(white, 4)
+    border-radius 50%
+    box-shadow 0 0 5px 0 alpha(black, 30%)
+.ava-black
+    mpd(0 0 15px)
+    width 70px
+    height @width
+    border-radius 50%
+    background black
+
+
+
+.cart
+    mpd(0 0 30px)
+    max-width 500px
+.cart:hover .cart-img
+    transform scale(1.1)
+.cart:hover .cart-img-content
+    background transparent
+.cart-ln
+    mpd()
+    resetLn(black, #F52A07)
+    trans()
+.cart-img-wrap
+    mpd()
+    position relative
+    overflow hidden
+.cart-img
+    mpd()
+    trans()
+    max-width 100%
+    height auto
+.cart-img-content
+    mpd(0, 25px 25px 10px)
+    trans()
+    position absolute
+    top 0px
+    left 0px
+    right 0px
+    bottom 0px
+    color white
+    text-shadow 0 0 18px black
+    background alpha(black, 40%)
+.cart-title
+    mpd(10px 0 15px)
+    font-size 14px
+    text-align center
+.cart-desc
+    mpd(-15px 0 15px)
+    font-size 20px
+    font-style italic
+    text-align center
+    & > i
+        font-size .85em
+.cart-sales
+    mpd(0, 5px 10px, inline-block)
+    b(#F52A07, 2)
+    font-style italic
+    color #F52A07
+    // text-shadow none
+
+
+
+.form-help
+    mpd(0 0 15px)
+    color #B2B2B2
+    font-size 16px
+
+
+.wall
+    mpd(0 0 30px, 15px 15px 1px)
+    b(#DBDBDB, 1)
+    background white
+
+
+
+.org
+    mpd()
+    position relative
+    // & *['col']
+    //     b(red)
+    // & [class*=col-]
+    //     b(red)
+.org-img
+    mpd(0 0 15px)
+    width 100%
+    height auto
+.org-item-wrap
+    mpd(0, 15px 0 1px, flex)
+    height 100%
+    flex-direction column
+    justify-content space-between
+.org-item
+    mpd(0 0 15px)
+    font-size 14px
+
+
+.scale
+    mpd(0 0 15px)
+    overflow hidden
+.scale-img
+    mpd()
+    trans()
+    max-width 100%
+    height auto
+.scale:hover .scale-img
+    transform scale(1.2)
+
+
+.cont-img
+    mpd(0 auto 15px)
+    trans()
+    max-width 100%
+    height auto
+
+
+.gslider
+    mpd(0 0 15px)
+.gslider-nav .slick-slide
+    &, &:focus, &:active
+        outline none
+    padding 0 5px
+.gslider-nav-img
+    mpd()
+    trans(300)
+    max-width 100%
+    height auto
+    user-select none
+    cursor pointer
+    opacity .6
+.gslider-nav .slick-center .gslider-nav-img
+    opacity 1
+
+.gslider-view
+    mpd(0 0 10px)
+.gslider-view .slick-slide
+    &, &:focus, &:active
+        outline none
+.gslider-view-img
+    mpd()
+    max-width 100%
+    height auto
+    user-select none
+    cursor pointer
+
+
+
+.modal
+    max-width 430px
+    width 100%
+
+
+
