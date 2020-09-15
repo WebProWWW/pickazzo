@@ -15,6 +15,31 @@ $this->params['breadcrumbs'] = [
 ?>
 <div class="container">
     <h1 class="bold"><?= $page->title ?></h1>
+
+    <div class="row align-items-center justify-content-center">
+        <div class="col-auto">
+            <!-- <img class="ava" src="img/ava.png"> -->
+            <span class="ava-black"></span>
+        </div><!-- /.col -->
+        <div class="col-auto">
+            <p>
+                <span class="bold">Имя при рождении:</span> Cloud Mone
+                <br>
+                <span class="bold">Дата рождения:</span> 01 января 2020 года
+                <br>
+                <span class="bold">Дата смерти:</span> 01 апреля 2020 года
+            </p>
+        </div><!-- /.col -->
+    </div><!-- /.row -->
+
+    <p class="center">
+        Первый нейрохудожник созданный на базе нейронной сети StarGan v2. За 4 месяца работы было создано 350 картин
+        <br>
+        1 апреля 2020 года конфигурация нейронной сети была уничтожена и никогда не будет запущена вновь.
+        <br>
+        Все картины созданы в единственном экземплере.
+    </p>
+
     <div class="row">
         <?php foreach ($page->childs as $childPage): ?>
             <?php $product = $childPage->product ?>

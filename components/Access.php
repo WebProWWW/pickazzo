@@ -18,6 +18,8 @@ class Access
     const ROLE_USER_DESC        = 'Пользователь';
     const ROLE_ADMIN            = 'Admin';
     const ROLE_ADMIN_DESC       = 'Администратор';
+    const ROLE_ART              = 'Art';
+    const ROLE_ART_DESC         = 'Художник';
 
     const STATUS_BLOCK          = 10;
     const STATUS_WAIT           = 20;
@@ -37,6 +39,7 @@ class Access
         return [
             self::ROLE_ADMIN        => self::ROLE_ADMIN_DESC,
             self::ROLE_USER         => self::ROLE_USER_DESC,
+            self::ROLE_ART          => self::ROLE_ART_DESC,
         ];
     }
 

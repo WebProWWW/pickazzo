@@ -521,8 +521,8 @@ class m200708_005547_init extends Migration
          * IMAGE
          */
         $this->createTable('image', [
-            'id'            => $this->primaryKey(),
-            'url'           => $this->string(),
+            'id' => $this->primaryKey(),
+            'url' => $this->string(),
         ], $this->options);
         $this->batchInsert('image', ['id','url'], [
             [1, '/img/catalog/demo-1.jpg'],
