@@ -26,6 +26,7 @@ class m200708_005547_init extends Migration
             'image',
             'product_category',
             'product',
+            'user_product',
             'product_image',
             'html',
             'editor',
@@ -578,6 +579,7 @@ class m200708_005547_init extends Migration
             'page_id'       => $this->integer()->null(),
             'title'         => $this->string(),
             'author'        => $this->string(),
+            'neuro'         => $this->string(),
             'artikul'       => $this->string(),
             'size'          => $this->string(),
             'description'   => $this->longText(),
@@ -585,11 +587,12 @@ class m200708_005547_init extends Migration
         ], $this->options);
         $this->createIndex('idx-product-page_id','product', 'page_id');
         $this->addForeignKey('fk-product-page', 'product', 'page_id', 'page', 'id','CASCADE','RESTRICT');
-        $this->batchInsert('product', ['id','page_id','title','author','artikul','size','description','price'], [[
+        $this->batchInsert('product', ['id','page_id','title','author','neuro','artikul','size','description','price'], [[
             /* id           */ 1,
             /* page_id      */ 15,
             /* title        */ 'Trust',
             /* author       */ 'Cloud Mone',
+            /* neuro        */ 'StarGAN v2',
             /* artikul      */ '00001',
             /* size         */ '4000х4000 px',
             /* description  */ '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
@@ -599,6 +602,7 @@ class m200708_005547_init extends Migration
             /* page_id      */ 16,
             /* title        */ 'Trust',
             /* author       */ 'Cloud Mone',
+            /* neuro        */ 'StarGAN v2',
             /* artikul      */ '00002',
             /* size         */ '4000х4000 px',
             /* description  */ '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
@@ -608,6 +612,7 @@ class m200708_005547_init extends Migration
             /* page_id      */ 17,
             /* title        */ 'Trust',
             /* author       */ 'Cloud Mone',
+            /* neuro        */ 'StarGAN v2',
             /* artikul      */ '00003',
             /* size         */ '4000х4000 px',
             /* description  */ '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
@@ -617,6 +622,7 @@ class m200708_005547_init extends Migration
             /* page_id      */ 18,
             /* title        */ 'Trust',
             /* author       */ 'Cloud Mone',
+            /* neuro        */ 'StarGAN v2',
             /* artikul      */ '00004',
             /* size         */ '4000х4000 px',
             /* description  */ '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
@@ -626,6 +632,7 @@ class m200708_005547_init extends Migration
             /* page_id      */ 19,
             /* title        */ 'Trust',
             /* author       */ 'Cloud Mone',
+            /* neuro        */ 'StarGAN v2',
             /* artikul      */ '00005',
             /* size         */ '4000х4000 px',
             /* description  */ '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
@@ -635,6 +642,7 @@ class m200708_005547_init extends Migration
             /* page_id      */ 20,
             /* title        */ 'Trust',
             /* author       */ 'Cloud Mone',
+            /* neuro        */ 'StarGAN v2',
             /* artikul      */ '00006',
             /* size         */ '4000х4000 px',
             /* description  */ '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
@@ -644,6 +652,7 @@ class m200708_005547_init extends Migration
             /* page_id      */ 21,
             /* title        */ 'Trust',
             /* author       */ 'Cloud Mone',
+            /* neuro        */ 'StarGAN v2',
             /* artikul      */ '00007',
             /* size         */ '4000х4000 px',
             /* description  */ '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
@@ -653,6 +662,7 @@ class m200708_005547_init extends Migration
             /* page_id      */ 22,
             /* title        */ 'Trust',
             /* author       */ 'Cloud Mone',
+            /* neuro        */ 'StarGAN v2',
             /* artikul      */ '00008',
             /* size         */ '4000х4000 px',
             /* description  */ '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
@@ -662,6 +672,7 @@ class m200708_005547_init extends Migration
             /* page_id      */ 23,
             /* title        */ 'Trust',
             /* author       */ 'Cloud Mone',
+            /* neuro        */ 'StarGAN v2',
             /* artikul      */ '00009',
             /* size         */ '4000х4000 px',
             /* description  */ '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
@@ -671,6 +682,7 @@ class m200708_005547_init extends Migration
             /* page_id      */ 24,
             /* title        */ 'Trust',
             /* author       */ 'Cloud Mone',
+            /* neuro        */ 'StarGAN v2',
             /* artikul      */ '00010',
             /* size         */ '4000х4000 px',
             /* description  */ '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
@@ -680,6 +692,7 @@ class m200708_005547_init extends Migration
             /* page_id      */ 25,
             /* title        */ 'Trust',
             /* author       */ 'Cloud Mone',
+            /* neuro        */ 'StarGAN v2',
             /* artikul      */ '00011',
             /* size         */ '4000х4000 px',
             /* description  */ '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
@@ -689,6 +702,7 @@ class m200708_005547_init extends Migration
             /* page_id      */ 26,
             /* title        */ 'Trust',
             /* author       */ 'Cloud Mone',
+            /* neuro        */ 'StarGAN v2',
             /* artikul      */ '00012',
             /* size         */ '4000х4000 px',
             /* description  */ '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
@@ -698,6 +712,7 @@ class m200708_005547_init extends Migration
             /* page_id      */ 27,
             /* title        */ 'Trust',
             /* author       */ 'Cloud Mone',
+            /* neuro        */ 'StarGAN v2',
             /* artikul      */ '00013',
             /* size         */ '4000х4000 px',
             /* description  */ '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
@@ -707,6 +722,7 @@ class m200708_005547_init extends Migration
             /* page_id      */ 28,
             /* title        */ 'Trust',
             /* author       */ 'Cloud Mone',
+            /* neuro        */ 'StarGAN v2',
             /* artikul      */ '00014',
             /* size         */ '4000х4000 px',
             /* description  */ '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
@@ -716,6 +732,7 @@ class m200708_005547_init extends Migration
             /* page_id      */ 29,
             /* title        */ 'Trust',
             /* author       */ 'Cloud Mone',
+            /* neuro        */ 'StarGAN v2',
             /* artikul      */ '00015',
             /* size         */ '4000х4000 px',
             /* description  */ '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
@@ -725,6 +742,7 @@ class m200708_005547_init extends Migration
             /* page_id      */ 30,
             /* title        */ 'Trust',
             /* author       */ 'Cloud Mone',
+            /* neuro        */ 'StarGAN v2',
             /* artikul      */ '00016',
             /* size         */ '4000х4000 px',
             /* description  */ '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
@@ -734,6 +752,7 @@ class m200708_005547_init extends Migration
             /* page_id      */ 31,
             /* title        */ 'Trust',
             /* author       */ 'Cloud Mone',
+            /* neuro        */ 'StarGAN v2',
             /* artikul      */ '00017',
             /* size         */ '4000х4000 px',
             /* description  */ '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
@@ -743,11 +762,23 @@ class m200708_005547_init extends Migration
             /* page_id      */ 32,
             /* title        */ 'Trust',
             /* author       */ 'Cloud Mone',
+            /* neuro        */ 'StarGAN v2',
             /* artikul      */ '00018',
             /* size         */ '4000х4000 px',
             /* description  */ '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
             /* price        */ 670000,
         ]]);
+
+        /*
+         * ORDER
+         */
+        $this->createTable('user_product', [
+            'id' => $this->primaryKey(),
+            'product_id' => $this->integer()->notNull(),
+            'user_id' => $this->integer()->notNull(),
+        ], $this->options);
+        $this->addForeignKey('fk-user_product-product', 'user_product', 'product_id', 'product', 'id', 'CASCADE', 'RESTRICT');
+        $this->addForeignKey('fk-user_product-user', 'user_product', 'user_id', 'user', 'id', 'CASCADE', 'RESTRICT');
 
         /*
          * PRODUCT_IMAGE

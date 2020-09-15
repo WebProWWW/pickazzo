@@ -25,6 +25,11 @@ return [
                 ],
                 [
                     'suffix' => '.html',
+                    'pattern' => 'korzina',
+                    'route' => 'user/cart',
+                ],
+                [
+                    'suffix' => '.html',
                     'pattern' => '<alias:[\w\-]+>',
                     'route' => 'site/index',
                     'defaults' => ['alias' => 'index'],

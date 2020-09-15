@@ -14,6 +14,7 @@ use yii\db\Query;
  * @property int|null $page_id
  * @property string|null $title
  * @property string $author
+ * @property string $neuro
  * @property string|null $artikul
  * @property string|null $size
  * @property string|null $description
@@ -22,6 +23,7 @@ use yii\db\Query;
  * @property Image[] $images
  * @property Image $image
  * @property Page $page
+ * @property string $formatPrice
  */
 class Product extends ActiveRecord
 {
@@ -64,6 +66,17 @@ class Product extends ActiveRecord
     }
 
     /**
+     * @param string|int $id
+     * @return Product|null
+     */
+    public static function findById($id)
+    {
+        return self::findOne([
+            'id' => $id
+        ]);
+    }
+
+    /**
      *
      * @return yii\db\ActiveQuery
      */
@@ -91,9 +104,8 @@ class Product extends ActiveRecord
     public function getProductImage()
     {
         return $this
-            ->hasOne(ProductImage::class, ['product_id' => 'id'])
-            ->orderBy('order')
-            ;
+            ->hasMany(ProductImage::class, ['product_id' => 'id'])
+            ->orderBy('order');
     }
 
     /**
@@ -106,6 +118,11 @@ class Product extends ActiveRecord
             ->hasOne(Image::class, ['id' => 'image_id'])
             ->via('productImage')
         ;
+    }
+
+    public function getFormatPrice()
+    {
+        return number_format($this->price, 0, ',', '&nbsp;');
     }
 
     /**

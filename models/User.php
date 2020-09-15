@@ -4,6 +4,7 @@ namespace models;
 
 use Yii;
 use yii\db\ActiveRecord;
+use yii\helpers\StringHelper;
 use yii\web\IdentityInterface;
 
 use components\Access;
@@ -24,6 +25,11 @@ use components\Access;
  * @property int $subscribe
  * @property int|null $created_at
  * @property int|null $updated_at
+ *
+ * @property int|string $productCount
+ * @property int|string $totalPrice
+ * @property Product[] $products
+ *
  */
 class User extends ActiveRecord implements IdentityInterface
 {
@@ -106,6 +112,50 @@ class User extends ActiveRecord implements IdentityInterface
             return $user->save();
         }
         return false;
+    }
+
+    /**
+     * @return string
+     */
+    public function getProductCount()
+    {
+        return UserProduct::find()->where(['user_id' => $this->id])->count();
+    }
+
+    /**
+     * @return string
+     */
+    public function getTotalPrice()
+    {
+        $price = 0;
+        foreach ($this->products as $product) {
+            $price += (float) $product->price;
+        }
+        return number_format($price, 0, ',', '&nbsp;');
+    }
+
+    /**
+     * @return yii\db\ActiveQuery
+     * @throws yii\base\InvalidConfigException
+     */
+    public function getProducts()
+    {
+        return $this
+            ->hasMany(Product::class, ['id' => 'product_id'])
+            ->viaTable('user_product', ['user_id' => 'id'])
+        ;
+    }
+
+    /**
+     * @param int|string $id
+     * @return bool
+     */
+    public function hasProduct($id)
+    {
+        return null !== UserProduct::findOne([
+            'product_id' => $id,
+            'user_id' => $this->id,
+        ]);
     }
 
     /*

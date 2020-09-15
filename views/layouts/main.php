@@ -9,6 +9,7 @@ use models\Page;
 use widgets\Form;
 
 use yii\helpers\Html;
+use yii\helpers\StringHelper;
 use yii\helpers\Url;
 use yii\helpers\ArrayHelper;
 
@@ -43,8 +44,8 @@ $breadcrumbs = ArrayHelper::getValue($this->params, 'breadcrumbs', []);
     <title><?= $pageTitle ?></title>
     <?php $this->head() ?>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,400&display=swap">
-    <link rel="stylesheet" href="/css/main.depends.css?v=113">
-    <link rel="stylesheet" href="/css/main.css?v=113">
+    <link rel="stylesheet" href="/css/main.depends.css?v=115">
+    <link rel="stylesheet" href="/css/main.css?v=115">
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="<?= $urlBase ?>/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?= $urlBase ?>/apple-touch-icon-114x114.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?= $urlBase ?>/apple-touch-icon-72x72.png">
@@ -80,25 +81,27 @@ $breadcrumbs = ArrayHelper::getValue($this->params, 'breadcrumbs', []);
             <div class="col"></div>
 
             <?php if (!Yii::$app->user->isGuest): ?>
-                <div class="col-auto">
+                <?php
+                    /* @var $user models\User */
+                    $user = Yii::$app->user->identity;
+                    $productCount = $user->productCount;
+                ?>
+                <div class="col-auto js-cart <?= ($productCount) ? '' : 'd-none' ?>">
                     <div class="d-flex align-items-center">
-                        <div class="dropdown-">
+                        <div class="dropdown">
                             <div class="ucart">
                                 <i class="i-cart d-sm-none"></i>
                                 <span class="ucart-txt d-none d-sm-block">Корзина</span>
-                                <!--
-                                <span class="ucart-count">33</span>
-                                -->
+                                <span class="ucart-count animate__animated animate__fast js-cart-count">
+                                    <?= StringHelper::truncate($productCount, 2, '..') ?>
+                                </span>
                             </div>
                             <div class="dropdown-content bottom-center">
                                 <p class="ws-nowrap right mb-1">
-                                    <span class="bold">7 878,38 руб.</span>
+                                    <span class="bold js-cart-price"><?= $user->totalPrice ?></span>
+                                    руб.
                                 </p>
-                                <a class="btn btn-sm btn-blue mb-2"
-                                   data-fancybox
-                                   data-src="#cart"
-                                   href="javascript:"
-                                >Купить</a>
+                                <a class="btn btn-sm btn-blue mb-2" href="<?= Url::to(['user/cart']) ?>">Купить</a>
                             </div>
                         </div><!-- .dropdown -->
                     </div><!-- .d-flex -->
@@ -290,16 +293,12 @@ $breadcrumbs = ArrayHelper::getValue($this->params, 'breadcrumbs', []);
         </div>
     </div><!-- .modal -->
 
-    <div class="modal" id="cart">
-        <div id="cart-vue"></div>
-    </div>
-
 </div><!-- .d-none -->
 
 <?php $this->endBody() ?>
 
-<script src="/js/main.depends.js?v=111"></script>
-<script src="/js/main.js?v=111"></script>
+<script src="/js/main.depends.js?v=115"></script>
+<script src="/js/main.js?v=115"></script>
 
 <?php if (Yii::$app->session->getFlash('is-email-confirm', false)): ?>
     <script>

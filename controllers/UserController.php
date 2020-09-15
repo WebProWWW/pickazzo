@@ -3,12 +3,13 @@
 
 namespace controllers;
 
+use models\Product;
 use models\User;
 use models\Login;
 use models\Registr;
 
 use Yii;
-use yii\console\Request;
+use yii\web\Request;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\web\Response;
@@ -24,23 +25,23 @@ class UserController extends Controller
 {
     private $_valid_request;
 
+    /**
+     * @return array
+     */
     public function actionCreateOrder()
     {
+        /* @var $user User */
         $req = $this->validRequest;
         Yii::$app->response->format = Response::FORMAT_JSON;
-//        $login = new Login();
-//        if ($login->load($req->post()) and $login->login()) {
-//            return [
-//                'success' => true,
-//            ];
-//        }
-//        return [
-//            'success' => false,
-//            'errors' => ActiveForm::validate($login),
-//        ];
+        $id = $req->post('id');
+        $user = Yii::$app->user->identity;
+        if ($product = Product::findById($id) and !$user->hasProduct($id)) {
+            $user->link('products', $product);
+        }
         return [
             'success' => true,
-            'user' => Yii::$app->user->identity,
+            'productCount' => $user->productCount,
+            'totalPrice' => $user->totalPrice,
         ];
     }
 
@@ -106,7 +107,7 @@ class UserController extends Controller
     }
 
     /**
-     * @return Request|yii\web\Request
+     * @return Request
      * @throws NotFoundHttpException
      */
     public function getValidRequest()
@@ -118,5 +119,32 @@ class UserController extends Controller
             throw new NotFoundHttpException();
         }
         return $this->_valid_request;
+    }
+
+    /**
+     * @return string
+     */
+    public function actionCart()
+    {
+        return $this->render('cart');
+    }
+
+    /**
+     * @return Response
+     * @throws NotFoundHttpException
+     */
+    public function actionRemoveProduct()
+    {
+        /* @var $user User */
+        $req = Yii::$app->request;
+        if ($req->isPost) {
+            $id = $req->post('id');
+            $product = Product::findOne(['id' => $id]);
+            $user = Yii::$app->user->identity;
+            $user->unlink('products', $product, true);
+            if ($user->productCount)  return $this->redirect(['user/cart']);
+            return $this->goHome();
+        }
+        throw new NotFoundHttpException();
     }
 }

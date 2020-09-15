@@ -18,12 +18,14 @@ use yii\helpers\Url;
  * @property Model $model
  * @property string $action
  * @property string $formId
+ * @property string $formClass
  */
 class Form extends Widget
 {
     public $formId;
     public $model;
     public $action='';
+    public $formClass;
 
     /**
      * @inheritDoc
@@ -33,6 +35,8 @@ class Form extends Widget
         parent::init();
         if (!is_object($this->model)) throw new InvalidConfigException(self::class.'::model = null');
         if ($this->formId === null) $this->formId = 'form-'.$this->id;
+        if ($this->formClass === null) $this->formClass = 'js-form';
+        if (is_string($this->formClass)) $this->formClass .= ' js-form';
         $this->action = Url::to($this->action);
         ob_start();
     }
@@ -46,11 +50,24 @@ class Form extends Widget
         return ''
             .Html::beginForm(null, null, [
                 'id' => $this->formId,
-                'class' => 'js-form',
+                'class' => $this->formClass,
                 'data-action' => $this->action,
             ])
                 .$content
             .Html::endForm()
+        .'';
+    }
+
+    /**
+     * @param string $attr
+     * @return string
+     */
+    public function inputHidden($attr = '')
+    {
+        if ($attr === '') return '';
+        $id = Html::getInputId($this->model, $attr);
+        return ''
+            .Html::activeHiddenInput($this->model, $attr, ['id' => $id])
         .'';
     }
 

@@ -12,6 +12,21 @@ delay = (ms = 0, cb = ->) ->
     setTimeout cb, ms
 
 
+updateCart = (count, price) ->
+    $cart = $ '.js-cart'
+    $cartCount = $ '.js-cart-count'
+    $cart.removeClass 'd-none'
+    $cart.addClass 'd-none' if count is 0
+    $cartCount.one 'animationend', (e) ->
+        $(this).removeClass 'animate__heartBeat'
+        on
+    $cartCount.addClass 'animate__heartBeat'
+    $('.js-cart-count').html count
+    $('.js-cart-price').html price
+    on
+
+
+
 $('#form-login').on 'ajax-done', (e, data) ->
     window.location.reload()
     on
@@ -22,6 +37,7 @@ $('#form-registr').on 'ajax-done', (e, data) ->
     $.fancybox.open
         src: '#register-success'
         type: 'inline'
+    on
 
 
 $('#form-contrib').on 'ajax-done', (e, data) ->
@@ -30,19 +46,19 @@ $('#form-contrib').on 'ajax-done', (e, data) ->
     $.fancybox.open
         src: '#contrib-success'
         type: 'inline'
+    on
+
+
+$('#form-product').on 'ajax-done', (e, data) ->
+    totalPrice = data?.totalPrice ? 0
+    productCount = data?.productCount ? 0
+    $(this).addClass 'd-none'
+    $('.js-to-cart').removeClass 'd-none'
+    updateCart productCount, totalPrice
+    on
 
 
 $('.js-form').form()
-
-# $formAddToCart = $ '#js-form-add-to-cart'
-
-# $formAddToCart.form
-#     action: $formAddToCart.attr 'data-action'
-#     validate: off
-# .on 'ajax-done', (e, data) ->
-#     console.log data
-#     on
-
 
 
 $('*[data-tab]').on 'click', (e) ->

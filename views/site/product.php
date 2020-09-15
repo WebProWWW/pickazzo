@@ -2,6 +2,8 @@
 
 use yii\helpers\Url;
 
+use widgets\Form;
+
 /* @var $view yii\web\View */
 /* @var $page models\Page */
 
@@ -71,17 +73,32 @@ $this->params['breadcrumbs'] = [
                         <a class="btn btn-blue"
                            data-fancybox
                            data-src="#login-register"
-                           href="javascript:">
+                           href="javascript:;">
                                 <i class="i-cart mr-2"></i>
                                 Добавить в корзину
                         </a>
                     <?php else: ?>
-                        <form id="js-form-add-to-cart" data-action="<?= Url::to(['/user/create-order']) ?>">
-                            <button class="btn btn-blue" type="submit" data-form-loader>
-                                <i class="i-cart mr-2"></i>
-                                Добавить в корзину
-                            </button>
-                        </form>
+                        <?php
+                            /* @var $user models\User */
+                            $user = $appUser->identity;
+                            $hasProduct = $user->hasProduct($product->id);
+                        ?>
+                        <a
+                            class="btn btn-blue js-to-cart <?= $hasProduct ? '' : 'd-none' ?>"
+                            href="<?= Url::to(['user/cart']) ?>"
+                        >
+                            <i class="i-cart mr-2"></i>
+                            Перейти в корзину
+                        </a>
+                        <?php $formCart = Form::begin([
+                            'model' => $product,
+                            'action' => ['/user/create-order'],
+                            'formId' => 'form-product',
+                            'formClass' => $hasProduct ? 'd-none' : '',
+                        ]); ?>
+                            <input type="hidden" name="id" value="<?= $product->id ?>">
+                            <?= $formCart->submit('<i class="i-cart mr-2"></i> Добавить в корзину') ?>
+                        <?php Form::end(); ?>
                     <?php endif; ?>
                 </div><!-- /.col -->
                 <div class="col-auto mr-2">
