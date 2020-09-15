@@ -75,6 +75,16 @@ class m200708_005547_init extends Migration
             /* password_hash    */ Yii::$app->security->generatePasswordHash('q00aCqU6'),
             /* created_at       */ time(),
             /* updated_at       */ time(),
+        ],[
+            /* username         */ 'Покупатель',
+            /* email            */ 'user@mail.com',
+            /* status           */ Access::STATUS_ACTIVE,
+            /* role             */ Access::ROLE_USER,
+            /* api_key          */ Yii::$app->security->generateRandomString(32),
+            /* auth_key         */ Yii::$app->security->generateRandomString(32),
+            /* password_hash    */ Yii::$app->security->generatePasswordHash('123456'),
+            /* created_at       */ time(),
+            /* updated_at       */ time(),
         ]]);
 
         /*
