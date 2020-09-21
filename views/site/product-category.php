@@ -23,7 +23,7 @@ $this->params['breadcrumbs'] = [
         </div><!-- /.col -->
         <div class="col-auto">
             <p>
-                <span class="bold">Имя при рождении:</span> Cloud Mone
+                <span class="bold">Имя при рождении:</span> <?= $page->title ?>
                 <br>
                 <span class="bold">Дата рождения:</span> 01 января 2020 года
                 <br>

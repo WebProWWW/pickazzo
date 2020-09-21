@@ -139,21 +139,21 @@ class m200708_005547_init extends Migration
             /* created_at   */ time(),
             /* updated_at   */ time(),
         ],
-        // КОЛЛЕКЦИИ / ДМИТРИЙ МИРОНОВ - 9
+        // КОЛЛЕКЦИИ / CLOUD MONE - 9
         [
             /* id           */ 9,
             /* parent_id    */ 2,
             /* default      */ 0,
             /* active       */ 1,
-            /* title        */ 'Дмитрий Миронов',
+            /* title        */ 'Cloud Mone',
             /* menu_enable  */ 0,
             /* menu_label   */ '',
             /* view         */ 'product-category',
-            /* alias        */ 'dmitrij-mironov',
+            /* alias        */ 'kollektsii-cloud-mone',
             /* created_at   */ time(),
             /* updated_at   */ time(),
         ],
-        // КОЛЛЕКЦИИ / ДМИТРИЙ МИРОНОВ / Trust - 15
+        // КОЛЛЕКЦИИ / CLOUD MONE / Trust - 15
         [
             /* id           */ 15,
             /* parent_id    */ 9,
@@ -167,7 +167,7 @@ class m200708_005547_init extends Migration
             /* created_at   */ time(),
             /* updated_at   */ time(),
         ],
-        // КОЛЛЕКЦИИ / ДМИТРИЙ МИРОНОВ / Trust - 16
+        // КОЛЛЕКЦИИ / CLOUD MONE / Trust - 16
         [
             /* id           */ 16,
             /* parent_id    */ 9,
@@ -181,7 +181,7 @@ class m200708_005547_init extends Migration
             /* created_at   */ time(),
             /* updated_at   */ time(),
         ],
-        // КОЛЛЕКЦИИ / ДМИТРИЙ МИРОНОВ / Trust - 17
+        // КОЛЛЕКЦИИ / CLOUD MONE / Trust - 17
         [
             /* id           */ 17,
             /* parent_id    */ 9,
@@ -195,21 +195,21 @@ class m200708_005547_init extends Migration
             /* created_at   */ time(),
             /* updated_at   */ time(),
         ],
-        // КОЛЛЕКЦИИ / ОКСАНА ДЕВОЧКИНА - 10
+        // КОЛЛЕКЦИИ / PETR VODKN - 10
         [
             /* id           */ 10,
             /* parent_id    */ 2,
             /* default      */ 0,
             /* active       */ 1,
-            /* title        */ 'Оксана Девочкина',
+            /* title        */ 'Petr Vodkn',
             /* menu_enable  */ 0,
             /* menu_label   */ '',
             /* view         */ 'product-category',
-            /* alias        */ 'oksana-devochkina',
+            /* alias        */ 'kollektsii-petr-vodkn',
             /* created_at   */ time(),
             /* updated_at   */ time(),
         ],
-        // КОЛЛЕКЦИИ / ОКСАНА ДЕВОЧКИНА / Trust - 18
+        // КОЛЛЕКЦИИ / PETR VODKN / Trust - 18
         [
             /* id           */ 18,
             /* parent_id    */ 10,
@@ -223,7 +223,7 @@ class m200708_005547_init extends Migration
             /* created_at   */ time(),
             /* updated_at   */ time(),
         ],
-        // КОЛЛЕКЦИИ / ОКСАНА ДЕВОЧКИНА / Trust - 19
+        // КОЛЛЕКЦИИ / PETR VODKN / Trust - 19
         [
             /* id           */ 19,
             /* parent_id    */ 10,
@@ -237,7 +237,7 @@ class m200708_005547_init extends Migration
             /* created_at   */ time(),
             /* updated_at   */ time(),
         ],
-        // КОЛЛЕКЦИИ / ОКСАНА ДЕВОЧКИНА / Trust - 20
+        // КОЛЛЕКЦИИ / PETR VODKN / Trust - 20
         [
             /* id           */ 20,
             /* parent_id    */ 10,
@@ -251,21 +251,21 @@ class m200708_005547_init extends Migration
             /* created_at   */ time(),
             /* updated_at   */ time(),
         ],
-        // КОЛЛЕКЦИИ / ЛИЗА ЗЕМСКОВА - 11
+        // КОЛЛЕКЦИИ / GANDINSKY - 11
         [
             /* id           */ 11,
             /* parent_id    */ 2,
             /* default      */ 0,
             /* active       */ 1,
-            /* title        */ 'Лиза Земскова',
+            /* title        */ 'GANdinsky',
             /* menu_enable  */ 0,
             /* menu_label   */ '',
             /* view         */ 'product-category',
-            /* alias        */ 'liza-zemskova',
+            /* alias        */ 'kollektsii-gandinsky',
             /* created_at   */ time(),
             /* updated_at   */ time(),
         ],
-        // КОЛЛЕКЦИИ / ЛИЗА ЗЕМСКОВА / Trust - 21
+        // КОЛЛЕКЦИИ / GANDINSKY / Trust - 21
         [
             /* id           */ 21,
             /* parent_id    */ 11,
@@ -279,7 +279,7 @@ class m200708_005547_init extends Migration
             /* created_at   */ time(),
             /* updated_at   */ time(),
         ],
-        // КОЛЛЕКЦИИ / ЛИЗА ЗЕМСКОВА / Trust - 22
+        // КОЛЛЕКЦИИ / GANDINSKY / Trust - 22
         [
             /* id           */ 22,
             /* parent_id    */ 11,
@@ -293,7 +293,7 @@ class m200708_005547_init extends Migration
             /* created_at   */ time(),
             /* updated_at   */ time(),
         ],
-        // КОЛЛЕКЦИИ / ЛИЗА ЗЕМСКОВА / Trust - 23
+        // КОЛЛЕКЦИИ / GANDINSKY / Trust - 23
         [
             /* id           */ 23,
             /* parent_id    */ 11,
@@ -307,21 +307,21 @@ class m200708_005547_init extends Migration
             /* created_at   */ time(),
             /* updated_at   */ time(),
         ],
-        // КОЛЛЕКЦИИ / ИВАН ИВАНОВ - 12
+        // КОЛЛЕКЦИИ / STYLEGEEKO - 12
         [
             /* id           */ 12,
             /* parent_id    */ 2,
             /* default      */ 0,
             /* active       */ 1,
-            /* title        */ 'Иван Иванов',
+            /* title        */ 'StyleGeeko',
             /* menu_enable  */ 0,
             /* menu_label   */ '',
             /* view         */ 'product-category',
-            /* alias        */ 'ivan-ivanov',
+            /* alias        */ 'kollektsii-stylegeeko',
             /* created_at   */ time(),
             /* updated_at   */ time(),
         ],
-        // КОЛЛЕКЦИИ / ИВАН ИВАНОВ / Trust - 24
+        // КОЛЛЕКЦИИ / STYLEGEEKO / Trust - 24
         [
             /* id           */ 24,
             /* parent_id    */ 12,
@@ -335,7 +335,7 @@ class m200708_005547_init extends Migration
             /* created_at   */ time(),
             /* updated_at   */ time(),
         ],
-        // КОЛЛЕКЦИИ / ИВАН ИВАНОВ / Trust - 25
+        // КОЛЛЕКЦИИ / STYLEGEEKO / Trust - 25
         [
             /* id           */ 25,
             /* parent_id    */ 12,
@@ -349,7 +349,7 @@ class m200708_005547_init extends Migration
             /* created_at   */ time(),
             /* updated_at   */ time(),
         ],
-        // КОЛЛЕКЦИИ / ИВАН ИВАНОВ / Trust - 26
+        // КОЛЛЕКЦИИ / STYLEGEEKO / Trust - 26
         [
             /* id           */ 26,
             /* parent_id    */ 12,
@@ -363,21 +363,21 @@ class m200708_005547_init extends Migration
             /* created_at   */ time(),
             /* updated_at   */ time(),
         ],
-        // КОЛЛЕКЦИИ / АННА САШКЕВИЧ - 13
+        // КОЛЛЕКЦИИ / MORDAT - 13
         [
             /* id           */ 13,
             /* parent_id    */ 2,
             /* default      */ 0,
             /* active       */ 1,
-            /* title        */ 'Анна Сашкевич',
+            /* title        */ 'Mordat',
             /* menu_enable  */ 0,
             /* menu_label   */ '',
             /* view         */ 'product-category',
-            /* alias        */ 'anna-sashkevich',
+            /* alias        */ 'kollektsii-mordat',
             /* created_at   */ time(),
             /* updated_at   */ time(),
         ],
-        // КОЛЛЕКЦИИ / АННА САШКЕВИЧ / Trust - 27
+        // КОЛЛЕКЦИИ / MORDAT / Trust - 27
         [
             /* id           */ 27,
             /* parent_id    */ 13,
@@ -391,7 +391,7 @@ class m200708_005547_init extends Migration
             /* created_at   */ time(),
             /* updated_at   */ time(),
         ],
-        // КОЛЛЕКЦИИ / АННА САШКЕВИЧ / Trust - 28
+        // КОЛЛЕКЦИИ / MORDAT / Trust - 28
         [
             /* id           */ 28,
             /* parent_id    */ 13,
@@ -405,7 +405,7 @@ class m200708_005547_init extends Migration
             /* created_at   */ time(),
             /* updated_at   */ time(),
         ],
-        // КОЛЛЕКЦИИ / АННА САШКЕВИЧ / Trust - 29
+        // КОЛЛЕКЦИИ / MORDAT / Trust - 29
         [
             /* id           */ 29,
             /* parent_id    */ 13,
@@ -419,21 +419,21 @@ class m200708_005547_init extends Migration
             /* created_at   */ time(),
             /* updated_at   */ time(),
         ],
-        // КОЛЛЕКЦИИ / АЛЕКСАНДР СПОК - 14
+        // КОЛЛЕКЦИИ / VVAN GAN - 14
         [
             /* id           */ 14,
             /* parent_id    */ 2,
             /* default      */ 0,
             /* active       */ 1,
-            /* title        */ 'Александр Спок',
+            /* title        */ 'VVan GAN',
             /* menu_enable  */ 0,
             /* menu_label   */ '',
             /* view         */ 'product-category',
-            /* alias        */ 'aleksandr-spok',
+            /* alias        */ 'kollektsii-vvan-gan',
             /* created_at   */ time(),
             /* updated_at   */ time(),
         ],
-        // КОЛЛЕКЦИИ / АЛЕКСАНДР СПОК / Trust - 30
+        // КОЛЛЕКЦИИ / VVAN GAN / Trust - 30
         [
             /* id           */ 30,
             /* parent_id    */ 14,
@@ -447,7 +447,7 @@ class m200708_005547_init extends Migration
             /* created_at   */ time(),
             /* updated_at   */ time(),
         ],
-        // КОЛЛЕКЦИИ / АЛЕКСАНДР СПОК / Trust - 31
+        // КОЛЛЕКЦИИ / VVAN GAN / Trust - 31
         [
             /* id           */ 31,
             /* parent_id    */ 14,
@@ -461,7 +461,7 @@ class m200708_005547_init extends Migration
             /* created_at   */ time(),
             /* updated_at   */ time(),
         ],
-        // КОЛЛЕКЦИИ / АЛЕКСАНДР СПОК / Trust - 32
+        // КОЛЛЕКЦИИ / VVAN GAN / Trust - 32
         [
             /* id           */ 32,
             /* parent_id    */ 14,
@@ -489,21 +489,21 @@ class m200708_005547_init extends Migration
             /* created_at   */ time(),
             /* updated_at   */ time(),
         ],
-        // ХУДОЖНИКИ / ДМИТРИЙ МИРОНОВ 33
+        // ХУДОЖНИКИ / CLOUD MONE 33
         [
-                /* id           */ 33,
-                /* parent_id    */ 3,
-                /* default      */ 0,
-                /* active       */ 1,
-                /* title        */ 'Дмитрий Миронов',
-                /* menu_enable  */ 0,
-                /* menu_label   */ '',
-                /* view         */ 'product-category',
-                /* alias        */ 'dmitrij-mironov-h',
-                /* created_at   */ time(),
-                /* updated_at   */ time(),
+            /* id           */ 33,
+            /* parent_id    */ 3,
+            /* default      */ 0,
+            /* active       */ 1,
+            /* title        */ 'Cloud Mone',
+            /* menu_enable  */ 0,
+            /* menu_label   */ '',
+            /* view         */ 'product-category',
+            /* alias        */ 'cloud-mone',
+            /* created_at   */ time(),
+            /* updated_at   */ time(),
         ],
-        // ХУДОЖНИКИ / ДМИТРИЙ МИРОНОВ / Trust 34
+        // ХУДОЖНИКИ / CLOUD MONE / Trust 34
         [
             /* id           */ 34,
             /* parent_id    */ 33,
@@ -517,7 +517,7 @@ class m200708_005547_init extends Migration
             /* created_at   */ time(),
             /* updated_at   */ time(),
         ],
-        // ХУДОЖНИКИ / ДМИТРИЙ МИРОНОВ / Trust 35
+        // ХУДОЖНИКИ / CLOUD MONE / Trust 35
         [
             /* id           */ 35,
             /* parent_id    */ 33,
@@ -531,35 +531,35 @@ class m200708_005547_init extends Migration
             /* created_at   */ time(),
             /* updated_at   */ time(),
         ],
-        // ХУДОЖНИКИ / ДМИТРИЙ МИРОНОВ / Trust 36
+        // ХУДОЖНИКИ / CLOUD MONE / Trust 36
         [
-                /* id           */ 36,
-                /* parent_id    */ 33,
-                /* default      */ 0,
-                /* active       */ 1,
-                /* title        */ 'Trust',
-                /* menu_enable  */ 0,
-                /* menu_label   */ '',
-                /* view         */ 'product',
-                /* alias        */ 'trust-36',
-                /* created_at   */ time(),
-                /* updated_at   */ time(),
+            /* id           */ 36,
+            /* parent_id    */ 33,
+            /* default      */ 0,
+            /* active       */ 1,
+            /* title        */ 'Trust',
+            /* menu_enable  */ 0,
+            /* menu_label   */ '',
+            /* view         */ 'product',
+            /* alias        */ 'trust-36',
+            /* created_at   */ time(),
+            /* updated_at   */ time(),
         ],
-        // ХУДОЖНИКИ / ОКСАНА ДЕВОЧКИНА 37
+        // ХУДОЖНИКИ / PETR VODKN 37
         [
             /* id           */ 37,
             /* parent_id    */ 3,
             /* default      */ 0,
             /* active       */ 1,
-            /* title        */ 'Оксана Девочкина',
+            /* title        */ 'Petr Vodkn',
             /* menu_enable  */ 0,
             /* menu_label   */ '',
             /* view         */ 'product-category',
-            /* alias        */ 'oksana-devochkina-h',
+            /* alias        */ 'petr-vodkn',
             /* created_at   */ time(),
             /* updated_at   */ time(),
         ],
-        // ХУДОЖНИКИ / ОКСАНА ДЕВОЧКИНА / Trust 38
+        // ХУДОЖНИКИ / PETR VODKN / Trust 38
         [
             /* id           */ 38,
             /* parent_id    */ 37,
@@ -573,7 +573,7 @@ class m200708_005547_init extends Migration
             /* created_at   */ time(),
             /* updated_at   */ time(),
         ],
-        // ХУДОЖНИКИ / ОКСАНА ДЕВОЧКИНА / Trust 39
+        // ХУДОЖНИКИ / PETR VODKN / Trust 39
         [
             /* id           */ 39,
             /* parent_id    */ 37,
@@ -587,7 +587,7 @@ class m200708_005547_init extends Migration
             /* created_at   */ time(),
             /* updated_at   */ time(),
         ],
-        // ХУДОЖНИКИ / ОКСАНА ДЕВОЧКИНА / Trust 40
+        // ХУДОЖНИКИ / PETR VODKN / Trust 40
         [
             /* id           */ 40,
             /* parent_id    */ 37,
@@ -601,21 +601,21 @@ class m200708_005547_init extends Migration
             /* created_at   */ time(),
             /* updated_at   */ time(),
         ],
-        // ХУДОЖНИКИ / ЛИЗА ЗЕМСКОВА 41
+        // ХУДОЖНИКИ / GANDINSKY 41
         [
             /* id           */ 41,
             /* parent_id    */ 3,
             /* default      */ 0,
             /* active       */ 1,
-            /* title        */ 'Лиза Земскова',
+            /* title        */ 'GANdinsky',
             /* menu_enable  */ 0,
             /* menu_label   */ '',
             /* view         */ 'product-category',
-            /* alias        */ 'liza-zemskova-h',
+            /* alias        */ 'gandinsky',
             /* created_at   */ time(),
             /* updated_at   */ time(),
         ],
-        // ХУДОЖНИКИ / ЛИЗА ЗЕМСКОВА / Trust 42
+        // ХУДОЖНИКИ / GANDINSKY / Trust 42
         [
             /* id           */ 42,
             /* parent_id    */ 41,
@@ -629,7 +629,7 @@ class m200708_005547_init extends Migration
             /* created_at   */ time(),
             /* updated_at   */ time(),
         ],
-        // ХУДОЖНИКИ / ЛИЗА ЗЕМСКОВА / Trust 43
+        // ХУДОЖНИКИ / GANDINSKY / Trust 43
         [
             /* id           */ 43,
             /* parent_id    */ 41,
@@ -643,7 +643,7 @@ class m200708_005547_init extends Migration
             /* created_at   */ time(),
             /* updated_at   */ time(),
         ],
-        // ХУДОЖНИКИ / ЛИЗА ЗЕМСКОВА / Trust 44
+        // ХУДОЖНИКИ / GANDINSKY / Trust 44
         [
             /* id           */ 44,
             /* parent_id    */ 41,
@@ -657,21 +657,21 @@ class m200708_005547_init extends Migration
             /* created_at   */ time(),
             /* updated_at   */ time(),
         ],
-        // ХУДОЖНИКИ / ИВАН ИВАНОВ 45
+        // ХУДОЖНИКИ / STYLEGEEKO 45
         [
             /* id           */ 45,
             /* parent_id    */ 3,
             /* default      */ 0,
             /* active       */ 1,
-            /* title        */ 'Иван Иванов',
+            /* title        */ 'StyleGeeko',
             /* menu_enable  */ 0,
             /* menu_label   */ '',
             /* view         */ 'product-category',
-            /* alias        */ 'ivan-ivanov-h',
+            /* alias        */ 'stylegeeko',
             /* created_at   */ time(),
             /* updated_at   */ time(),
         ],
-        // ХУДОЖНИКИ / ИВАН ИВАНОВ / Trust 46
+        // ХУДОЖНИКИ / STYLEGEEKO / Trust 46
         [
             /* id           */ 46,
             /* parent_id    */ 45,
@@ -685,7 +685,7 @@ class m200708_005547_init extends Migration
             /* created_at   */ time(),
             /* updated_at   */ time(),
         ],
-        // ХУДОЖНИКИ / ИВАН ИВАНОВ / Trust 47
+        // ХУДОЖНИКИ / STYLEGEEKO / Trust 47
         [
             /* id           */ 47,
             /* parent_id    */ 45,
@@ -699,7 +699,7 @@ class m200708_005547_init extends Migration
             /* created_at   */ time(),
             /* updated_at   */ time(),
         ],
-        // ХУДОЖНИКИ / ИВАН ИВАНОВ / Trust 48
+        // ХУДОЖНИКИ / STYLEGEEKO / Trust 48
         [
             /* id           */ 48,
             /* parent_id    */ 45,
@@ -713,21 +713,21 @@ class m200708_005547_init extends Migration
             /* created_at   */ time(),
             /* updated_at   */ time(),
         ],
-        // ХУДОЖНИКИ / АННА САШКЕВИЧ 49
+        // ХУДОЖНИКИ / MORDAT 49
         [
             /* id           */ 49,
             /* parent_id    */ 3,
             /* default      */ 0,
             /* active       */ 1,
-            /* title        */ 'Анна Сашкевич',
+            /* title        */ 'Mordat',
             /* menu_enable  */ 0,
             /* menu_label   */ '',
             /* view         */ 'product-category',
-            /* alias        */ 'anna-sashkevich-h',
+            /* alias        */ 'mordat',
             /* created_at   */ time(),
             /* updated_at   */ time(),
         ],
-        // ХУДОЖНИКИ / АННА САШКЕВИЧ / Trust 50
+        // ХУДОЖНИКИ / MORDAT / Trust 50
         [
             /* id           */ 50,
             /* parent_id    */ 49,
@@ -741,7 +741,7 @@ class m200708_005547_init extends Migration
             /* created_at   */ time(),
             /* updated_at   */ time(),
         ],
-        // ХУДОЖНИКИ / АННА САШКЕВИЧ / Trust 51
+        // ХУДОЖНИКИ / MORDAT / Trust 51
         [
             /* id           */ 51,
             /* parent_id    */ 49,
@@ -755,7 +755,7 @@ class m200708_005547_init extends Migration
             /* created_at   */ time(),
             /* updated_at   */ time(),
         ],
-        // ХУДОЖНИКИ / АННА САШКЕВИЧ / Trust 52
+        // ХУДОЖНИКИ / MORDAT / Trust 52
         [
             /* id           */ 52,
             /* parent_id    */ 49,
@@ -769,21 +769,21 @@ class m200708_005547_init extends Migration
             /* created_at   */ time(),
             /* updated_at   */ time(),
         ],
-        // КОЛЛЕКЦИИ / АЛЕКСАНДР СПОК - 53
+        // КОЛЛЕКЦИИ / VVAN GAN - 53
         [
             /* id           */ 53,
             /* parent_id    */ 3,
             /* default      */ 0,
             /* active       */ 1,
-            /* title        */ 'Александр Спок',
+            /* title        */ 'VVan GAN',
             /* menu_enable  */ 0,
             /* menu_label   */ '',
             /* view         */ 'product-category',
-            /* alias        */ 'aleksandr-spok-h',
+            /* alias        */ 'vvan-gan',
             /* created_at   */ time(),
             /* updated_at   */ time(),
         ],
-        // КОЛЛЕКЦИИ / АЛЕКСАНДР СПОК / Trust - 54
+        // КОЛЛЕКЦИИ / VVAN GAN / Trust - 54
         [
             /* id           */ 54,
             /* parent_id    */ 53,
@@ -797,7 +797,7 @@ class m200708_005547_init extends Migration
             /* created_at   */ time(),
             /* updated_at   */ time(),
         ],
-        // КОЛЛЕКЦИИ / АЛЕКСАНДР СПОК / Trust - 55
+        // КОЛЛЕКЦИИ / VVAN GAN / Trust - 55
         [
             /* id           */ 55,
             /* parent_id    */ 53,
@@ -811,7 +811,7 @@ class m200708_005547_init extends Migration
             /* created_at   */ time(),
             /* updated_at   */ time(),
         ],
-        // КОЛЛЕКЦИИ / АЛЕКСАНДР СПОК / Trust - 56
+        // КОЛЛЕКЦИИ / VVAN GAN / Trust - 56
         [
             /* id           */ 56,
             /* parent_id    */ 53,

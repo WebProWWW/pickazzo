@@ -21,7 +21,7 @@ use yii\helpers\Url;
                         <div class="cart-img-wrap">
                             <img class="cart-img" width="500" height="500" src="<?= $category->image->url ?>">
                             <div class="cart-img-content">
-                                <h3 class="mb-0"><?= $category->title ?></h3>
+                                <h3 class="mb-0"><?= $childPage->title ?></h3>
                                 <?php if ($count): ?>
                                     <p><small><?= $count ?> картин</small></p>
                                 <?php endif; ?>

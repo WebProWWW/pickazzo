@@ -23,7 +23,7 @@
                     <h3 class="center cart-title">
                         <span class="bold">Художник: Cloud Mone</span>
                         <br>
-                        Продано за <span class="snormal bold">10 250</span> <i class="i-dl"></i>
+                        Продано за <span class="bold">10 250</span> <i class="i-rub"></i>
                     </h3>
                 </a>
 
@@ -41,7 +41,7 @@
                     <h3 class="center cart-title">
                         <span class="bold">Художник: Cloud Mone</span>
                         <br>
-                        Продано за <span class="snormal bold">7 390</span> <i class="i-dl"></i>
+                        Продано за <span class="bold">7 390</span> <i class="i-rub"></i>
                     </h3>
                 </a>
 
@@ -59,7 +59,7 @@
                     <h3 class="center cart-title">
                         <span class="bold">Художник: Cloud Mone</span>
                         <br>
-                        Продано за <span class="snormal bold">12 850</span> <i class="i-dl"></i>
+                        Продано за <span class="bold">12 850</span> <i class="i-rub"></i>
                     </h3>
                 </a>
 
@@ -77,7 +77,7 @@
                     <h3 class="center cart-title">
                         <span class="bold">Художник: Cloud Mone</span>
                         <br>
-                        Продано за <span class="snormal bold">15 610</span> <i class="i-dl"></i>
+                        Продано за <span class="bold">15 610</span> <i class="i-rub"></i>
                     </h3>
                 </a>
 
@@ -95,7 +95,7 @@
                     <h3 class="center cart-title">
                         <span class="bold">Художник: Cloud Mone</span>
                         <br>
-                        Продано за <span class="snormal bold">8 470</span> <i class="i-dl"></i>
+                        Продано за <span class="bold">8 470</span> <i class="i-rub"></i>
                     </h3>
                 </a>
 
@@ -113,7 +113,7 @@
                     <h3 class="center cart-title">
                         <span class="bold">Художник: Cloud Mone</span>
                         <br>
-                        Продано за <span class="snormal bold">21 940</span> <i class="i-dl"></i>
+                        Продано за <span class="bold">21 940</span> <i class="i-rub"></i>
                     </h3>
                 </a>
 
