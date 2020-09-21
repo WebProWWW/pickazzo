@@ -23,6 +23,8 @@
                     <h3 class="center cart-title">
                         <span class="bold">Художник: Cloud Mone</span>
                         <br>
+                        Картина: Trust
+                        <br>
                         Продано за <span class="bold">10 250</span> <i class="i-rub"></i>
                     </h3>
                 </a>
@@ -40,6 +42,8 @@
                     </div>
                     <h3 class="center cart-title">
                         <span class="bold">Художник: Cloud Mone</span>
+                        <br>
+                        Картина: Trust
                         <br>
                         Продано за <span class="bold">7 390</span> <i class="i-rub"></i>
                     </h3>
@@ -59,6 +63,8 @@
                     <h3 class="center cart-title">
                         <span class="bold">Художник: Cloud Mone</span>
                         <br>
+                        Картина: Trust
+                        <br>
                         Продано за <span class="bold">12 850</span> <i class="i-rub"></i>
                     </h3>
                 </a>
@@ -76,6 +82,8 @@
                     </div>
                     <h3 class="center cart-title">
                         <span class="bold">Художник: Cloud Mone</span>
+                        <br>
+                        Картина: Trust
                         <br>
                         Продано за <span class="bold">15 610</span> <i class="i-rub"></i>
                     </h3>
@@ -95,6 +103,8 @@
                     <h3 class="center cart-title">
                         <span class="bold">Художник: Cloud Mone</span>
                         <br>
+                        Картина: Trust
+                        <br>
                         Продано за <span class="bold">8 470</span> <i class="i-rub"></i>
                     </h3>
                 </a>
@@ -112,6 +122,8 @@
                     </div>
                     <h3 class="center cart-title">
                         <span class="bold">Художник: Cloud Mone</span>
+                        <br>
+                        Картина: Trust
                         <br>
                         Продано за <span class="bold">21 940</span> <i class="i-rub"></i>
                     </h3>
